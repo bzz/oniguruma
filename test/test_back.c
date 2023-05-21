@@ -632,6 +632,7 @@ extern int main(int argc, char* argv[])
   x2("\\R", "\x0b", 0, 1);
   n("\\R\\n", "\r\n");
   x2("\\R", "\xc2\x85", 0, 2);
+  x2("b\\R.*\\R", "ab\nc\n", 1, 5); 
   x2("\\N", "a", 0, 1);
   n("\\N", "\n");
   n("(?m:\\N)", "\n");
